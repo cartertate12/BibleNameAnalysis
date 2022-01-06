@@ -24,4 +24,5 @@ def GetMaxVerseLength(verseListing):
         temp_list = ele.split(' ') 
         lenDict[counter] = len(temp_list)
         counter = counter + 1
-    return max(lenDict.values())
+    maxLen = max(lenDict.values())
+    return maxLen
