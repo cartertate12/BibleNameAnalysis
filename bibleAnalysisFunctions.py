@@ -15,3 +15,13 @@ def GetVerseReferences(verseReferenceListing):
         books.append(temp_list_2[1][::-1])
 
     return books, chapters, verses
+
+def GetMaxVerseLength(verseListing):
+    '''Given a list of verse texts, return the maximum verse length in terms of word count along with a dictionary of verse references and their lengths'''
+    lenDict = {}
+    counter = 0
+    for ele in verseListing:
+        temp_list = ele.split(' ') 
+        lenDict[counter] = len(temp_list)
+        counter = counter + 1
+    return max(lenDict.values()), lenDict
