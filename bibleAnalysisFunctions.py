@@ -25,4 +25,4 @@ def GetMaxVerseLength(verseListing):
         lenDict[counter] = len(temp_list)
         counter = counter + 1
     maxLen = max(lenDict.values())
-    return maxLen
+    return maxLen, lenDict
