@@ -1,5 +1,8 @@
 def GetVerseReferences(verseReferenceListing):
     '''Given a book, chapter, verse listing, return three lists that contain those elements broken out in that order.'''
+    
+    verseReferenceListing = [ele[::-1] for ele in verseReferenceListing]
+    
     verses = []
     chapters = []
     books = []
